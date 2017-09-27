@@ -19,17 +19,24 @@
    		   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    		<script src="js/bootstrap.min.js"></script>
    	
+
+
+
+      <h1><center>Malins hästquiz</center></h1>
+
+		<h2>
+         <p> Hästar, hästar, hästar....här kan du testa dina kunskaper om hästraser och deras egenskaper.  </p>
+			<p> Välj i listan nedan vilken hästras du vill testa dina kunskaper på! Lycka till!</p>
+</h1>
+
 {% for quiz in quizzes %}
-    <p><a href="{% url 'quiz_page' quiz.quiz_number %}">
+    <p><button><a href="{% url 'quiz_page' quiz.quiz_number %}">
         {{ quiz.name }}
-    </a></p>
+    </a></p></button>
 {% endfor %}
 
 
-      <h1>Malins hästquiz</h1>
-		<p> Välkommen till denna Quiz om hästar. </p>
-			<p> Här kan du testa dina kunskaper om hästraser och deras egenskaper 
-			</p>
+			
          <div class="col-md-4">
                <p>HerthaLiv på D-ponnyn Siglo
                <img src="/static/HLSigge.png" alt="Sigge och HerthaLiv" style="width:600px;height:350px;">

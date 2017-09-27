@@ -18,11 +18,11 @@
    <body>
    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    		<script src="js/bootstrap.min.js"></script>
-   	<h1>Du är klar och fick {{ correct }} av {{ total }}</h1>
+   	
+      <h1>Du är klar och fick {{ correct }} rätt av {{ total }} möjliga!</h1>
 
-      <h1>Resultat</h1>
-		<p>Grattis det var rätt!
-		</p>
+      <h1>Är du nöjd med resultatet?</h1>
+		<p>Vill du göra om eller starta en ny quiz gå till startsidan	</p>
 		
 
       <p><a href="{% url 'start_page' %}">

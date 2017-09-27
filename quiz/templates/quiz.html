@@ -18,18 +18,14 @@
    <body>
    		   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    		<script src="js/bootstrap.min.js"></script>
+ <h1>Du har valt:</h1>
+
    	<h1>{{ quiz.name }}</h1>
     <p>{{ quiz.description }}</p>
+      <p> Välj att gå vidare genom att trycka på Starta.</p>
+    
 
-      <h1>Malins hästquiz</h1>
-		<p> Välkommen till denna Quiz om hästar. </p>
-			<p> Här kan du testa dina kunskaper om hästraser och deras egenskaper 
-			</p>
-
-		
-		</p>
-		
-				
+     				
 		
 <p><a href="{% url 'question_page' quiz_number 1 %}">
 
