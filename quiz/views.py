@@ -33,12 +33,24 @@ def quiz(request, quiz_number):
     return render(request, "quiz.html", context)
 
 def question(request, quiz_number, question_number):
-    return render(request, "question.html")
+    context = {
+        "question_number": question_number,
+            "question": "Hur många bultar har ölandsbron?",
+        "answer1": "12",
+           "answer2": "66 400",
+            "answer3": "7 428 954",
+            "quiz_number": quiz_number,
+    }
+    return render(request, "question.html", context)
+
 
 def completed(request, quiz_number):
-    return render(request, "results.html")
-
-
+    context = {
+            "correct": 12,
+            "total": 20,
+        "quiz_number": quiz_number,
+    }
+    return render(request, "results.html", context)
 
 
 
