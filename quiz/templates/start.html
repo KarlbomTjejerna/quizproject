@@ -20,19 +20,18 @@
    		<script src="js/bootstrap.min.js"></script>
    	
 
+      <h1><center>Malins Hästquiz</center></h1>
 
-
-      <h1><center>Malins hästquiz</center></h1>
-
-		<h2>
-         <p> Hästar, hästar, hästar....här kan du testa dina kunskaper om hästraser och deras egenskaper.  </p>
-			<p> Välj i listan nedan vilken hästras du vill testa dina kunskaper på! Lycka till!</p>
-</h1>
+		<h2><center>
+         <p> Hästar, hästar, hästar....välkommen till hästquizen! Här kan du testa dina kunskaper om hästraser och deras egenskaper. </p>
+			<p> Du kommer få tre frågot per hästras. Välj vilken quiz du vill börja med. </p>
+         <p>Lycka till!</p>
+</h1></center>
 
 {% for quiz in quizzes %}
-    <p><button><a href="{% url 'quiz_page' quiz.quiz_number %}">
+    <p><a href="{% url 'quiz_page' quiz.quiz_number %}">
         {{ quiz.name }}
-    </a></p></button>
+    </a></p>
 {% endfor %}
 
 
