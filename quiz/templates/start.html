@@ -18,7 +18,10 @@
    <body>
    		   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    		<script src="js/bootstrap.min.js"></script>
-   	
+   	{% for quiz in quizzes %}
+    <p>{{ quiz.name }}</p>
+{% endfor %}
+
       <h1>Malins hästquiz</h1>
 		<p> Välkommen till denna Quiz om hästar. </p>
 			<p> Här kan du testa dina kunskaper om hästraser och deras egenskaper 

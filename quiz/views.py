@@ -20,10 +20,17 @@ quizzes = [
 
 
 def startpage(request):
-    return render(request, "start.html")
+    context = {
+        "quizzes": quizzes,
+    }
+    return render(request, "start.html", context)
 
 def quiz(request, quiz_number):
-    return render(request, "quiz.html")
+    context = {
+        "quiz": quizzes[quiz_number - 1],
+        "quiz_number": quiz_number,
+    }
+    return render(request, "quiz.html", context)
 
 def question(request, quiz_number, question_number):
     return render(request, "question.html")
