@@ -7,6 +7,8 @@ urlpatterns = [
     path("quiz/<int:quiz_number>/", views.quiz, name="quiz_page"),
     path("quiz/<int:quiz_number>/question/<int:question_number>/", views.question, name="question_page"),
     path("quiz/<int:quiz_number>/completed/", views.completed, name="results_page"),
+    path('admin/', admin.site.urls),
+
 ]
 
 
