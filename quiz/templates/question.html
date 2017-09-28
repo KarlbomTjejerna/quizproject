@@ -24,9 +24,11 @@
 
 <form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
 	{% csrf_token %}
-    <input type="radio" name="answer" value="1"><p>{{ answer1 }}</p> 
+    <input type="radio" name="answer" value="1"checked><p>{{ answer1 }}</p> 
     <input type="radio" name="answer" value="2"><p>{{ answer2 }}</p>
     <input type="radio" name="answer" value="3"><p>{{ answer3 }}</p>
+    <button type="submit">Nästa</button>
+
 </form>
  
     
