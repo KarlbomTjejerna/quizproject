@@ -8,11 +8,13 @@ def startpage(request):
 
     return render(request, "start.html", context)
 
+
 def quiz(request, quiz_number):
-     context = {
-    	    "quiz": Quiz.objects.get(quiz_number=quiz_number),
-        	"quiz_number": quiz_number,
+    context = {
+            "quiz": Quiz.objects.get(quiz_number=quiz_number),
+        "quiz_number": quiz_number,
     }
+
 
     return render(request, "quiz.html", context)
 
