@@ -21,5 +21,10 @@ class Question(models.Model):
 
 
 
+    	python manage.py shell
+
+
+
+
 
 

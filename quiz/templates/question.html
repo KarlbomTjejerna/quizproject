@@ -21,14 +21,19 @@
    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    		<script src="js/bootstrap.min.js"></script>
    	<h1>{{ question_number }}. {{ question }}</h1>
-    <p>{{ answer1 }}</p>
-    <p>{{ answer2 }}</p>
-    <p>{{ answer3 }}</p>
 
+<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
+	{% csrf_token %}
+    <input type="radio" name="answer" value="1"><p>{{ answer1 }}</p> 
+    <input type="radio" name="answer" value="2"><p>{{ answer2 }}</p>
+    <input type="radio" name="answer" value="3"><p>{{ answer3 }}</p>
+</form>
+ 
     
 <p><a href="{% url 'results_page' quiz_number %}">
     Nästa
 </a></p>
+
 
 
    </body>
