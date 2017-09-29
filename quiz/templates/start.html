@@ -31,9 +31,9 @@
 </h1></center>
 
 {% for quiz in quizzes %}
-    <p><a href="{% url 'quiz_page' quiz.quiz_number %}">
+    <a href="{% url 'quiz_page' quiz.quiz_number %}">
         {{ quiz.name }}
-    </a></p>
+    </a>
 {% endfor %}
 
 
